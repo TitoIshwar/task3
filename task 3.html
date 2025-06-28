@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple News Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        body {
+            padding-top: 60px;
+        }
+        
+.floating-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+   background: #333;
+    color: white;
+    padding: 15px;
+    height: 80px;
+    padding-left: 550px;
+    width: 1515px;
+    bottom: 700px;
+    padding-right: 625px;
+    padding-bottom: 15px;
+
+        }
+        
+        .container {
+            display: flex;
+            padding: 15px;
+            background: rgb(253, 253, 253);
+
+        }
+        
+        .left-sidebar, .right-sidebar {
+            width: 25%;
+            padding: 10px;
+            background: rgb(164, 166, 168);
+            border: 15px;
+            border-color: #333;
+    padding-left: 75px;
+
+        }
+        
+        .main-content {
+            width: 50%;
+            padding: 10px;
+            background: rgb(16, 50, 85);
+        }
+        
+        .news-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .left-sidebar, .main-content, .right-sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="floating-header">
+        <h1>Times Of Tamil Nadu</h1>
+    </header>
+    
+<div class="container">
+<div class="left-sidebar">
+        <h2>Categories</h2>
+        <ul>
+                <li>World</li>
+                <li>Politics</li>
+                <li>Business</li>
+                <li>Technology</li>
+                <li>Sports</li>
+        </ul>
+        </div>
+        
+        <main class="main-content">
+            <div class="news-item">
+                <h2>Breaking News Story</h2>
+                <p>This is the main news article content. It appears in the center section.</p>
+            </div>
+            
+            <div class="news-item">
+                <h2>Another News Story</h2>
+                <p>More news content goes here in this section.</p>
+            </div>
+        </main>
+        
+        <div class="right-sidebar">
+            <h2>Trending</h2>
+            <ul>
+                <li>Trending Story 1</li>
+                <li>Trending Story 2</li>
+                <li>Trending Story 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
