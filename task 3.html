@@ -1,114 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple News Portal</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <title>Breaking News Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+    }
 
-        
-        body {
-            padding-top: 60px;
-        }
-        
-.floating-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-   background: #333;
-    color: white;
-    padding: 15px;
-    height: 80px;
-    padding-left: 550px;
-    width: 1515px;
-    bottom: 700px;
-    padding-right: 625px;
-    padding-bottom: 15px;
+    header {
+      background: #000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Georgia', serif;
+    }
 
-        }
-        
-        .container {
-            display: flex;
-            padding: 15px;
-            background: rgb(253, 253, 253);
+    header h1 {
+      font-size: 3em;
+      font-family: 'Times New Roman', serif;
+      font-weight: bold;
+    }
 
-        }
-        
-        .left-sidebar, .right-sidebar {
-            width: 25%;
-            padding: 10px;
-            background: rgb(164, 166, 168);
-            border: 15px;
-            border-color: #333;
-    padding-left: 75px;
 
-        }
-        
-        .main-content {
-            width: 50%;
-            padding: 10px;
-            background: rgb(16, 50, 85);
-        }
-        
-        .news-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f5f5f5;
-            border-radius: 5px;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .left-sidebar, .main-content, .right-sidebar {
-                width: 100%;
-            }
-        }
-    </style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .article {
+      width: 32%;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .article img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 15px;
+    }
+
+    .article-content h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #d90000;
+    }
+
+    .article-content p {
+      font-size: 14px;
+      color: #333;
+    }
+
+
+    @media (max-width: 768px) {
+      .article {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="floating-header">
-        <h1>Times Of Tamil Nadu</h1>
-    </header>
-    
+
+<header>
+  <h1>Times of India</h1>
+</header>
 <div class="container">
-<div class="left-sidebar">
-        <h2>Categories</h2>
-        <ul>
-                <li>World</li>
-                <li>Politics</li>
-                <li>Business</li>
-                <li>Technology</li>
-                <li>Sports</li>
-        </ul>
-        </div>
-        
-        <main class="main-content">
-            <div class="news-item">
-                <h2>Breaking News Story</h2>
-                <p>This is the main news article content. It appears in the center section.</p>
-            </div>
-            
-            <div class="news-item">
-                <h2>Another News Story</h2>
-                <p>More news content goes here in this section.</p>
-            </div>
-        </main>
-        
-        <div class="right-sidebar">
-            <h2>Trending</h2>
-            <ul>
-                <li>Trending Story 1</li>
-                <li>Trending Story 2</li>
-                <li>Trending Story 3</li>
-            </ul>
-        </div>
+
+  <div class="article">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJkco1xIZ3r4uhTB0UnlQxsQ2QdJ1qZvccQw&s" alt="Modi Speech" />
+    <div class="article-content">
+      <h3>PM Modi Addresses Parliament</h3>
+      <p>Prime Minister Narendra Modi delivers his first address after the 2024 elections, emphasizing development and national unity.</p>
     </div>
+  </div>
+
+  <div class="article">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXL4jCgdF07SC5cUyA5AP1RwWexcVsatI8jQ&s" alt="Manipur Violence" />
+    <div class="article-content">
+      <h3>Fresh Violence Reported in Manipur</h3>
+      <p>New incidents of violence erupt in Manipur as curfew is reimposed in sensitive districts amid ongoing unrest.</p>
+    </div>
+  </div>
+
+  <div class="article">
+    <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/5fad/live/2763da30-2671-11ef-8c01-1b99a1df16e2.jpg.webp" alt="Parliament NDA" />
+    <div class="article-content">
+      <h3>NDA Forms Government</h3>
+      <p>The BJP-led NDA coalition has successfully formed the government again, with Modi sworn in for the third consecutive term.</p>
+    </div>
+  </div>
+
+  <div class="article">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSArqPl4C9bU_lq4GKr7npGZIEKIubTEIy9Hw&s" alt="Stock Market" />
+    <div class="article-content">
+      <h3>Sensex Hits Record High</h3>
+      <p>The BSE Sensex surges past 80,000 points for the first time, driven by strong global cues and domestic optimism post-elections.</p>
+    </div>
+  </div>
+
+  <div class="article">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyfzPsJeR9xzTb1AxxRkPv1cxqjGu28ypmtw&s" alt="NEET UG Result" />
+    <div class="article-content">
+      <h3>NEET UG Results Declared</h3>
+      <p>Over 24 lakh students appear for NEET UG 2024. The NTA announces results with record high scorers this year.</p>
+    </div>
+  </div>
+
+  <div class="article">
+    <img src="https://www.livemint.com/lm-img/img/2023/08/23/original/Chandrayaan-3_Moon_landing_1692770473582.jpg" alt="Chandrayaan-4" />
+    <div class="article-content">
+      <h3>ISRO Confirms Chandrayaan-4 Mission</h3>
+      <p>ISRO announces the launch timeline for Chandrayaan-4, aimed at bringing back lunar soil samples by 2026.</p>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
